@@ -29,8 +29,8 @@ The analysis is fully offline. It makes no live ROA changes, sends no probes, an
 
 ## Presentation
 
-- 📄 Presentation (PDF): `docs/presentation/[file name].pdf`
-- 🎥 YouTube Intro: [WATCH]([paste YouTube link here])
+- 📄 Presentation `
+- 🎥 YouTube Intro: 
 
 ## Team
 
