@@ -35,29 +35,12 @@ The analysis is fully offline. It makes no live ROA changes, sends no probes, an
 ## Team
 
 | Jasmeet | Sakec | Team lead: problem understanding and solution design |
+
 | Nishant | Sakec | Data engineer: analysis pipeline |
+
 | Uma | Sakec | Results analyst: case studies, report and demo |
 
-## Repository Layout
 
-```
-src/        pipeline.py, generate_sample_data.py
-data/       events.csv, traceroutes.jsonl, reachability.csv
-results/    summary.md, events.json, paths.csv
-docs/       PSEUDOCODE.md, presentation/, video/
-```
-
-## Quick Start (Python 3.9+, no dependencies)
-
-```bash
-python3 src/generate_sample_data.py   # synthetic demo data -> data/ (skip when using real data)
-python3 src/pipeline.py               # -> results/summary.md, events.json, paths.csv
-```
-
-Useful options: `--window-min 30`, `--guard-after-min 5`, `--min-samples 3`.
-
-**Input formats:** `events.csv` (event_id, prefix, origin_asn, from_state, to_state, transition_time), `traceroutes.jsonl` (`{event_id, vp, dst, ts, hops, reached}`), `reachability.csv` (event_id, vp, ts, ok; empty = missing).
-
-## Project Status
+Project 
 
 Developed for Challenge PS-032: Path and Reachability Analysis During RPKI State Changes. The prototype currently runs end to end on **synthetic data**. Classification thresholds are heuristics and must be validated and tuned on the organiser-supplied events before drawing conclusions.
